@@ -8,17 +8,14 @@ import { contactList } from "./contact/ContactList.js";
 
 export const createFooter = () => {
     //get the element to insert the business name into
-    const businessNameElement = document.querySelector('.footer__businessName')
+    const contentElement = document.querySelector('.footer')
 
     //insert the business name into the DOM
-    businessNameElement.innerHTML += businessName()
+    contentElement.innerHTML += `
+        ${contactList()}
+        ${businessName()}
+        ${establishDate()}
+        `
+        //insert the list of contacts into the DOM
 
-    //get the element to insert the establish date into
-    const establishDateElement = document.querySelector('.footer__establishDate')
-
-    //insert the establish date into the DOM
-    establishDateElement.innerHTML += establishDate();
-
-    //insert the list of contacts into the DOM
-    contactList();
 }

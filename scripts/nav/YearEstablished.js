@@ -4,6 +4,6 @@
 
 export const establishDate = () => {
     return `
-        2020
+        <div class=".footer__establishDate">Established 2020</div>
     `
 }
